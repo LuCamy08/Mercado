@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoriasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('bienvenida');
+});
+
+/*Route::get('/categoria/principal', function () {
+    return view('categoria.principal');
+});*/
+
+Route::get('/categoria/principal', [CategoriasController::class,'mostrarCategorias']);
+
+Route::get('/login', function(){
+    return view('login');
 });
