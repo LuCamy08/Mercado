@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,14 @@ Route::get('/', function () {
     return view('bienvenida');
 });
 
+Route::get('/login', function(){
+    return view('login');
+});
+
 /*Route::get('/categoria/principal', function () {
     return view('categoria.principal');
 });*/
 
 Route::get('/categoria/principal', [CategoriasController::class,'mostrarCategorias']);
 
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/productos',[ProductosController::class, 'mostrarProductos']);

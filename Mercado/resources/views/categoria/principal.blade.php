@@ -43,6 +43,18 @@
                     </div>
                 </div>
 
+                @foreach($categorias as $categoria)
+                <table class= "default">
+                <tr>
+                <th>{{$categoria->imagen}}</th>
+                <th><h2>{{$categoria->nombre}}</h2></th>
+                <th>
+                <h4><a href="/productos"><button class="botons" type="submit"> Ver </button></a></h4>
+                </th>
+                </tr>
+                </table>
+                @endforeach
+
             </main>
         </div>
     </div>

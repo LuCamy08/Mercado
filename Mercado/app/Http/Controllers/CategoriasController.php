@@ -8,7 +8,7 @@ use DB;
 class CategoriasController extends Controller
 {
     public function mostrarCategorias(){
-        $categoria = DB::table('categorias')->get();
-        return view('categoria/principal')->with('categorias',$categoria);
+        $categorias = DB::table('categorias')->get();
+        return view('categoria.principal')->with('categorias',$categorias);
     }
 }
