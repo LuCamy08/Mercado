@@ -31,8 +31,18 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Rol">
+						<select name="rol" id="input" placeholder="Rol" class="form-control" >
+				
+							<option>Cliente</option>
+							<option>Encargado</option>
+							<option>Supervisor</option>
+							<option>Contador</option>
+							<option>Cliente</option>
 						
+
+					</select>
+						<!--<input type="text" class="form-control" placeholder="Rol">
+						-->
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
