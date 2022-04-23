@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string("nombre",50);
             $table->string("descripcion",200)->nullable();
             $table->float("precio",8,2);
-            $table->string("imagen",100)->nullable();
+            $table->binary("imagen",100)->nullable();
             $table->tinyInteger("concesionado");
             $table->string("motivo",100);
             $table->integer("existencia");
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('productos');
     }
 };

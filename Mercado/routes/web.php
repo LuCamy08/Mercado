@@ -30,3 +30,5 @@ Route::get('/login', function(){
 Route::get('/categoria/principal', [CategoriasController::class,'mostrarCategorias']);
 
 Route::get('/productos',[ProductosController::class, 'mostrarProductos']);
+route::get('/productosregistrar',[ProductosController::class,'viewRegistro']);
+route::post('/productos',[ProductosController::class,'registrarProductos'])->name('productos.registrarProductos');

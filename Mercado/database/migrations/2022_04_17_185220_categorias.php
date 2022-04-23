@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string("nombre",50);
             $table->string("descripcion",200)->nullable();
-            $table->string("imagen",30)->nullable();
+            $table->binary("imagen",30)->nullable();
             $table->tinyInteger("estado");
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('categorias');
     }
 };
