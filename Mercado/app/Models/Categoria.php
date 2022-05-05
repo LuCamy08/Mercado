@@ -9,8 +9,8 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    protected $table = 'categoria';
-    // public $timestamps = false;
+    protected $table = 'categorias';
+    public $timestamps = false;
     protected $primaryKey = 'id';
     protected $fillable = [
         'nombre',
@@ -19,7 +19,7 @@ class Categoria extends Model
         'estado',   
     ];
     public function productos(){
-        return $this->belongsToMany(Producto::class, 'categoria_producto');
+        return $this->belongsToMany(Producto::class, 'categorias_productos');
     }
 
 }

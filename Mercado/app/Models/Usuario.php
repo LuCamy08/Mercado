@@ -9,8 +9,8 @@ class Usuario extends Model
 {
     use HasFactory;
 
-    protected $table = 'usuario';
-    // public $timestamps = false;
+    protected $table = 'usuarios';
+    public $timestamps = false;
     protected $primaryKey = 'id';
     protected $fillable = [
         'nombre',
@@ -21,7 +21,8 @@ class Usuario extends Model
         'telefono',
         'rol',
         'activo',
-        'password',   
+        'password',
+        'fecha',   
     ];
 
     public function producto(){

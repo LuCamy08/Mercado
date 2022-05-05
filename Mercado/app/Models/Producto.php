@@ -10,7 +10,7 @@ class Producto extends Model
     use HasFactory;
 
     protected $table = 'producto';
-    // public $timestamps = false;
+    public $timestamps = false;
     protected $primaryKey = 'id';
     protected $fillable = [
         'nombre',
@@ -25,7 +25,7 @@ class Producto extends Model
     ];
     
     public function categoria(){
-        return $this->belongsToMany(Categoria::class, 'categoria_producto');
+        return $this->belongsToMany(Categoria::class, 'categorias_productos');
     }
 
     public function usuario(){
