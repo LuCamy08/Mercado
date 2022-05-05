@@ -32,3 +32,18 @@ Route::get('/categoria/principal', [CategoriasController::class,'mostrarCategori
 Route::get('/productos',[ProductosController::class, 'mostrarProductos']);
 route::get('/productosregistrar',[ProductosController::class,'viewRegistro']);
 route::post('/productos',[ProductosController::class,'registrarProductos'])->name('productos.registrarProductos');
+
+//Supervisor
+Route::get('/supervisor-principal', [UsuariosController::class, 'PrincipalSupervisor'])->name('supervisor.PrincipalSupervisor');
+Route::get('/HistorialVendedor/{id}', [UsuariosController::class, 'HistorialVendedor'])->name('supervisor.Historial');
+
+//Encargado
+Route::get('/encargado', [UsuariosController::class, 'PrincipalEncargado'])->name('encargado.PrincipalEncargado');
+
+//Cliente
+Route::get('/cliente', [UsuariosController::class,'PrincipalCliente'])->name('cliente.PrincipalCliente');
+//Route::get('/comprador/productos/{id}',[ProductosController::class,'mostrarProductosCategoria'])->name('comprador.mostrarProductosCategoria');
+
+
+Route::get('/comprador', [UsuariosController::class,'Comprador']);
+Route::get('/categorias', [CategoriasController::class, 'compradorCategorias']);

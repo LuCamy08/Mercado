@@ -77,7 +77,7 @@
                     </label>
                     <br>
                     <label>
-                        Procentaje:
+                        Porcentaje:
                         
                         <input type="text" class="form-control" name="porcentajeManejo">
                     </label>

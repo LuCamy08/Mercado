@@ -13,17 +13,10 @@
     <div class="container-fluid">
         <div class="row justify-content-right align-content-right">
             <div class="col-8 barra">
-                <h4 class="text-light">World Shoes</h4>
+                <h4 class="text-light">Categorias</h4>
             </div>
             <div class="col-4 text-right barra">
                 <ul class="navbar-nav mr-auto">
-                    <li>
-                        <a href="#" class="px-3 text-light perfil dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle user"></i></a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
-                            <a class="dropdown-item menuperfil cerrar" href="/login"><i class="fas fa-sign-out-alt m-1"></i>Iniciar Sesión</a>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -32,19 +25,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="barra-lateral col-12 col-sm-auto">
-                <nav class="menu d-flex d-sm-block justify-content-center flex-wrap">
-                    <a href="#"><i class="fas fa-home"></i><span>Inicio</span></a>
-                    <a href="/Productos_en_general"><i class="fas fa-home"></i><span>Todos los productos</span></a>
-                </nav>
-                
             </div>
             <main class="main col">
-                <div class="row justify-content-center align-content-center text-center">
-                    <div class="columna col-lg-6">
-                        <h1><center> CATEGORÍAS </center></h1>
-                    </div>
-                </div>
-
                 @foreach($categorias as $categoria)
                 <table class= "default">
                 <tr>    
@@ -54,7 +36,7 @@
 
                 <tr>
                    <th>
-                    <h4><a href="{{route('productos.mostrarProductos',$categoria->id)}}"><button class="botons" type="submit"> Ver </button></a></h4>
+                    <h4><a href="/productos"><button class="botons" type="submit"> Ver </button></a></h4>
                    </th> 
                 </tr>
                 </table>
